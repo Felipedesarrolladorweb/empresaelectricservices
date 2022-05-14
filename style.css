@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  html {
+    font-size: 62.5%;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Roboto";
+    color: #7a7574;
+  }
+  
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: #1D2124;
+  }
+  header {
+    position: fixed;
+    min-width: 100vw;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    margin-left: 2rem;
+    margin-top: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    font-family: "Roboto", sans-serif;
+  }
+  .logotext {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    font-size: 1.7rem;
+  }
+  .logo img {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+  .logo p.logo1 {
+    color: #7b8998;
+  }
+  .logo p.logo2 {
+    color: #1e84b1;
+    font-weight: bold;
+  }
+  .nav-links {
+    display: none;
+  }
+  /* Burger thing */
+  .burger {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 1rem;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: #3f3d56;
+    margin: 0.5rem 0rem;
+    display: block;
+    transition: all 0.5s ease;
+  }
+  
+  .nav-links1 li {
+    margin-bottom: 4rem;
+  }
+  .nav-links1 a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+  }
+  .nav-links1 a:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-links1 {
+    background: #0071C0;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    transition: transform 1s ease;
+    padding-top: 14rem;
+    text-align: center;
+  }
+  .nav-links1 button {
+    margin-top: 2.3rem;
+    width: 17rem;
+    height: 4.2rem;
+    background-color: #0071C0;
+    border: white solid 1px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+  .nav-open {
+    transform: translateX(-100%);
+  }
+  .toggle .line1 {
+    transform: rotateZ(45deg) translateY(300%);
+    background: white;
+    position: fixed;
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
+    position: fixed;
+  }

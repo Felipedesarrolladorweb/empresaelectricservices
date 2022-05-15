@@ -23,7 +23,7 @@
     position: fixed;
     min-width: 100vw;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: #181818;
   }
   nav {
     display: flex;
@@ -33,16 +33,21 @@
   
   .logo {
     margin-left: 2rem;
-    margin-top: 0.9rem;
     display: flex;
     flex-direction: row;
     font-family: "Roboto", sans-serif;
   }
+  .logo h1 {
+    color: #0052CD;
+    font-size: 6rem;
+  }
   .logotext {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin-left: 1rem;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255, 0.9);
   }
   .logo img {
     width: 3.4rem;
@@ -68,7 +73,7 @@
   }
   .burger span {
     padding: 0.2rem 2rem;
-    background: #3f3d56;
+    background: rgb(255, 255, 255, 0.9);
     margin: 0.5rem 0rem;
     display: block;
     transition: all 0.5s ease;

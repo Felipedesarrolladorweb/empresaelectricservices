@@ -183,7 +183,7 @@ nav {
   justify-content: space-evenly;
   align-items: center;
 }
-div.cards1 {
+ .servicios1 div.cards1 {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -194,9 +194,9 @@ div.cards1 {
   margin: auto;
   margin-bottom: 7rem;
 }
-.card1,
-.card2,
-.card3 {
+.servicios1 div.card1,
+.servicios1 div.card2,
+.servicios1 div.card3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -378,7 +378,8 @@ div.cards1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;  
+  align-items: center;
+  border: black solid 1px;
 }
 .card-background2 {
   background-image: url('/src/maquinacultivo.png');
@@ -408,7 +409,7 @@ div.cards1 {
   margin-top: 14rem;
   border-top: #e3a300 solid 4px;
   border-left: #e3a300 solid 2px;
-  width: 34rem;
+  width: 72%;
 }
 .card-background1 div.card1 h4,
 .card-background2 div.card2 h4,
@@ -474,9 +475,9 @@ div.cards1 {
   .title-section {
     overflow-x: hidden;
   }
-  .cards1 div.card1, 
-  .cards1 div.card2, 
-  .cards1 div.card3{
+  .servicios1 .cards1 div.card1, 
+  .servicios1 .cards1 div.card2, 
+  .servicios1 .cards1 div.card3 {
     margin-left: 0;
     margin-right: 0;
     position: absolute;
@@ -504,7 +505,6 @@ div.cards1 {
   .quienes-somos img {
     width: 40%;
   }
-  .quienes-somos
   .cards1 div.card1 {
    transform: translate(-129%, 17%);
   } 

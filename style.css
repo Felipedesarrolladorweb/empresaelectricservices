@@ -1,133 +1,530 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
-  
-  html {
-    font-size: 62.5%;
-    text-decoration: none;
-    list-style: none;
-    scroll-behavior: smooth;
-    font-family: "Roboto";
-    color: #7a7574;
-  }
-  
-  a {
-    list-style: none;
-    text-decoration: none;
-    color: #1D2124;
-  }
-  header {
-    position: fixed;
-    min-width: 100vw;
-    z-index: 1;
-    background-color: #181818;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    margin-left: 2rem;
-    display: flex;
-    flex-direction: row;
-    font-family: "Roboto", sans-serif;
-  }
-  .logo h1 {
-    color: #0052CD;
-    font-size: 6rem;
-  }
-  .logotext {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 1rem;
-    font-size: 1.5rem;
-    color: rgb(255, 255, 255, 0.9);
-  }
-  .logo img {
-    width: 3.4rem;
-    height: 3.4rem;
-  }
-  .logo p.logo1 {
-    color: #7b8998;
-  }
-  .logo p.logo2 {
-    color: #1e84b1;
-    font-weight: bold;
-  }
-  .nav-links {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  color: rgb(255, 255, 255, 0.9);
+  font-family: "Roboto", "Times New Roman", Times, serif;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: #1d2124;
+}
+header {
+  position: fixed;
+  min-width: 100vw;
+  z-index: 2;
+  background-color: #181818;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+}
+.logo h1 {
+  color: #0052cd;
+  font-size: 6rem;
+}
+.logotext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255, 0.9);
+}
+.logo img {
+  width: 3.4rem;
+  height: 3.4rem;
+}
+.logo p.logo1 {
+  color: #7b8998;
+}
+.logo p.logo2 {
+  color: #1e84b1;
+  font-weight: bold;
+}
+.nav-links {
+  display: none;
+}
+/* Burger thing */
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+.burger span {
+  padding: 0.2rem 2rem;
+  background: rgb(255, 255, 255, 0.9);
+  margin: 0.5rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.nav-links1 li {
+  margin-bottom: 4rem;
+}
+.nav-links1 a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.nav-links1 a:hover {
+  text-decoration: underline;
+}
+
+.nav-links1 {
+  background: #0d346f;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  flex-direction: column;
+  transition: transform 1s ease;
+  padding-top: 14rem;
+  text-align: center;
+}
+.nav-links1 button {
+  margin-top: 2.3rem;
+  width: 17rem;
+  height: 4.2rem;
+  background-color: #0071c0;
+  border: white solid 1px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.nav-open {
+  transform: translateX(-100%);
+}
+.toggle .line1 {
+  transform: rotateZ(45deg) translateY(300%);
+  background: white;
+  position: fixed;
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotateZ(-45deg) translateY(-300%);
+  background: white;
+  position: fixed;
+}
+
+/* Title section */
+
+.title-section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("/src/mainimg-m.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 7vmin;
+}
+.title-section h1 {
+  font-size: 4rem;
+}
+.title-section p {
+  font-size: 2rem;
+}
+
+.title-section div.button-title button {
+  border-top-left-radius: 1.2rem;
+  width: 17rem;
+  height: 3.4rem;
+  margin-top: 2rem;
+  margin-right: 2rem;
+}
+.title-section .button1 {
+  background-color: #e3a300;
+  border: #ffffff solid 1px;
+}
+.title-section .button2 {
+  background-color: #ffffff;
+  border-style: none;
+  border: #1d2124 solid 1px;
+}
+.title-section .button-title a {
+  color: #403535;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.servicios1 {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+div.cards1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin-bottom: 7rem;
+  margin: auto;
+  margin-bottom: 7rem;
+}
+.card1,
+.card2,
+.card3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: #f6f7f8;
+  width: 27rem;
+  height: 43rem;
+  margin-top: 4rem;
+  margin-bottom: 2.4rem;
+  margin-left: 1rem;
+  font-size: 1.7rem;
+  box-shadow: rgb(0, 0, 0, 0.6) 0px 0px 7px;
+  box-shadow: rgb(0, 0, 0, 0.6) 0px 4px 17px;
+  border-top-left-radius: 2rem;
+  border-top: #e3a300 solid 4px;
+  border-bottom: #0d346f solid 2px;
+}
+.cards1 img {
+  width: 7rem;
+  margin: 1rem;
+}
+.card1 p,
+.card2 p,
+.card3 p {
+  width: 21rem;
+  font-size: 1.5rem;
+  color: rgba(57, 55, 55, 0.9);
+}
+.card1 h2,
+.card2 h2,
+.card3 h2 {
+  font-size: 2.7rem;
+  margin: 1rem 0;
+}
+.card1 a,
+.card2 a,
+.card3 a {
+  margin-top: 2rem;
+}
+.card1 a,
+.card2 a,
+.card3 a {
+  border-bottom: #1d2124 solid 0.1rem;
+}
+.quienes-somos-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  background-image: url('/src/industry-m.png');
+  background-size: 100% 50%;
+  background-position: 0% 20%;
+  background-repeat: no-repeat;
+}
+.quienes-somos-section h1 {
+  font-size: 3.4rem;
+  width: 34rem;
+  margin-bottom: 4rem;
+  color: #e3a300;
+}
+.quienes-somos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f6f7f8;
+}
+.quienes-somos img {
+  width: 34rem;
+}
+.description-servicios {
+  background-color: rgba(25, 94, 137, 0.9);
+  width: 34rem;
+  height: 40rem;
+  padding: 0 1rem;
+  border-left: #e3a300 solid 2px;
+}
+.description-servicios h1 {
+  color: #f6f7f8;
+  font-weight: bold;
+  font-size: 3.4rem;
+  margin-top: 4rem;
+}
+.description-servicios p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.description-servicios button {
+  background-color: #e3a300;
+  border-style: none;
+  width: 14rem;
+  height: 2.7rem;
+  border-radius: 0.4rem;
+}
+.description-servicios button a {
+  font-weight: bold;
+}
+.description-servicios button a:hover {
+  text-decoration: underline;
+}
+.cards2 {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cards2 h4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+.construyendo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.construyendo-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1d2124;
+  width: 34rem;
+} 
+.construyendo-title h1 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  font-size: 3.7rem;
+}
+.construyendo-title h1 span {
+  color: #0071c0;
+}
+.construyendo-title p {
+  font-size: 2rem;
+  margin-bottom: 9rem;
+}
+.construyendo-icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin-left: 2rem;
+  color: #1d2124;
+}
+.construyendo-icons img {
+  width: 7rem;
+}
+.construyendo-icons p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  height: 7rem;
+  padding-top: 4rem;
+  width: 16rem;
+  color: #0071c0;
+}
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4rem;
+}
+.construyendo-card {
+  min-width: 100vw;
+  min-height: 100rem;
+}
+.card-background1 {
+  background-image: url('/src/electrica.png');
+  background-size: 94%;
+  background-position: 43% 0%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.card-background2 {
+  background-image: url('/src/maquinacultivo.png');
+  background-size: 94%;
+  background-position: 43% 0%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-background3 {
+  background-image: url('/src/talleringenieria.png');
+  background-size: 94%;
+  background-position: 43% 0%;
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-background1 div.card1,
+.card-background2 div.card2,
+.card-background3 div.card3 {
+  margin-top: 14rem;
+  border-top: #e3a300 solid 4px;
+  border-left: #e3a300 solid 2px;
+  width: 34rem;
+}
+.card-background1 div.card1 h4,
+.card-background2 div.card2 h4,
+.card-background3 div.card3 h4 {
+  font-size: 2.9rem;
+  text-decoration: underline #e3a300;
+  margin-bottom: 2.9rem;
+}
+
+
+@media screen and (min-width: 900px) {
+  .burger {
     display: none;
   }
-  /* Burger thing */
-  .burger {
-    position: relative;
-    display: block;
-    cursor: pointer;
-    margin-top: 1rem;
-    margin-right: 1rem;
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 50vw;
   }
-  .burger span {
-    padding: 0.2rem 2rem;
-    background: rgb(255, 255, 255, 0.9);
-    margin: 0.5rem 0rem;
-    display: block;
-    transition: all 0.5s ease;
-  }
-  
-  .nav-links1 li {
-    margin-bottom: 4rem;
-  }
-  .nav-links1 a {
-    color: white;
+  .nav-links li a {
+    color: #f6f7f8;
     font-size: 2rem;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+  }
+  .nav-links button {
+    width: 11rem;
+    height: 2.9rem;
+    border-radius: 0.4rem;
     font-weight: bold;
   }
-  .nav-links1 a:hover {
-    text-decoration: underline;
+  .nav-links button a {
+    font-size: 2rem;
   }
-  
-  .nav-links1 {
-    background: #0071C0;
-    position: fixed;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 100%;
+  .title-section {
+    background-image: url("/src/mainimg.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .title-section div.main-title {
+    display: flex;
     flex-direction: column;
-    transition: transform 1s ease;
-    padding-top: 14rem;
-    text-align: center;
+    width: 59vw;
+    align-self: center;
   }
-  .nav-links1 button {
-    margin-top: 2.3rem;
-    width: 17rem;
-    height: 4.2rem;
-    background-color: #0071C0;
-    border: white solid 1px;
-    border-radius: 4px;
-    color: white;
-    cursor: pointer;
+  .title-section div.main-title h1 {
+    font-size: 4.9rem;
+    margin-bottom: 2rem;
   }
-  .nav-open {
-    transform: translateX(-100%);
+  .title-section p {
+    min-width: 31rem;
+    max-width: 49rem;
+    margin-bottom: 2rem;
   }
-  .toggle .line1 {
-    transform: rotateZ(45deg) translateY(300%);
-    background: white;
-    position: fixed;
+}
+
+@media screen and (min-width: 970px) {
+  .title-section {
+    position: relative;
+    clip-path: polygon(50% 100%, 100% 90%, 100% 0, 0 0, 0 90%);
+    background-attachment: fixed;
   }
-  .toggle .line2 {
-    opacity: 0;
+  .title-section {
+    overflow-x: hidden;
   }
-  .toggle .line3 {
-    transform: rotateZ(-45deg) translateY(-300%);
-    background: white;
-    position: fixed;
+  .cards1 div.card1, 
+  .cards1 div.card2, 
+  .cards1 div.card3{
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
   }
+  .quienes-somos-section {
+    min-width: 100vw;
+    min-height: 100rem;
+    margin-top: 40rem;
+    border: black solid 1px;
+    background-image: url('/src/industry.png');
+    background-size: 100% 29%;
+    background-position: 0% 10%;
+    background-repeat: no-repeat;
+  }
+  .quienes-somos-section h1 {
+    color: #e3a300;
+    font-size: 2.6rem;
+    font-weight: bold;
+    width: fit-content;
+    margin-left: 14%;
+    width: 39rem;
+    margin-bottom: 4rem;
+    border: black solid 1px;
+  }
+  .quienes-somos img {
+    width: 40%;
+  }
+  .quienes-somos
+  .cards1 div.card1 {
+   transform: translate(-129%, 17%);
+  } 
+  .cards1 div.card2 {
+   transform: translate(0%, 17%);
+  } 
+  .cards1 div.card3 {
+   transform: translate(129%, 17%);
+  } 
+  .servicios1 img.industryimg {
+    margin-top: 40rem;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  .title-section {
+    background-size: cover;
+    background-position: 0% 0%;
+  }
+  .title-section .main-title h1 {
+    width: 90%;
+  }
+}
